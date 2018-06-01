@@ -1,4 +1,4 @@
-Handlebars.regiesterHelper('comment_body', function(){
+Handlebars.registerHelper('comment_body', function(){
   if(this.state === 'closed'){
     return new Handlebars.Safestring(this.body)
   } else {
