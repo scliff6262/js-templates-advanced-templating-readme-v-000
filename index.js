@@ -1,3 +1,11 @@
+Handlebars.regiesterHelper('comment_body', function(){
+  if(this.state === 'closed'){
+    return new Handlebars.Safestring(this.body)
+  } else {
+    return new Handlebars.Safestring("<strong>" + this.body + "</strong>")
+  }
+})
+
 function loadIssues(){
   /*
     const issue = {
